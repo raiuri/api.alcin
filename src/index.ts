@@ -1,13 +1,21 @@
-import express from 'express';
-import connection from './database/dbConnection';
-connection.dbConnect();
+import { Request, Response, application, Application } from 'express';
+import 'reflect-metadata';
+// import connection from './database/dbConnection';
+// connection.dbConnect();
+class App {
+    app: Application;
 
+    contructor() {
+        this.app = application;
+    }
 
+    middlewares() {
 
-const app = express();
+    }
 
-app.get('/', (req, res) => {
-    res.send('Helllo world');
-});
+    routes() {
+        this.app.use('/', index.router);
+    }
+}
 
-export default app;
+export default App;

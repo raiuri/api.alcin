@@ -1,0 +1,19 @@
+{
+    "type": "postgres",
+    "host": "motty.db.elephantsql.com",
+    "port": 5432,
+    "username": "cseopnye",
+    "password": "FMWmBephd43m13bp7LO1R_qhmBVs5kED",
+    "database": "cseopnye",
+    "syncronized": true,
+    "logging": false,
+    "entities": [
+        "src/entities/**/*entity.ts"
+    ],
+    "migration": [
+        "src/migration/**/*.ts"
+    ],
+    "subscribers": [
+        "src/subscriber/**/*.ts"
+    ]
+}

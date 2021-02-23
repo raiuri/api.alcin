@@ -19,6 +19,7 @@ class MongooseDb implements DbInterface {
                 username,
                 password
             } = param;
+
             const conn = new Mongoose().connect(`
                 mongodb+srv://${username}:${password}@cluster0.kbry1.mongodb.net/compresemfila?retryWrites=true&w=majority
             `,
@@ -57,8 +58,8 @@ class dbConnection {
 }
 
 const connection = new dbConnection(new MongooseDb().dbConn({
-    username: 'raiuri',
-    password: 'Wd5X5UXRT8306noZ'
+    username: '', // TODO: fix this problem with enveroiment variable
+    password: ''
 }));
 
 export default connection;
